@@ -2,320 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recruitment - Bobble Digital</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Add this below the existing CSS in style.css */
-
-    .homepage {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      padding: 30px;
-      background: linear-gradient(to right, #f0f2f5, #e2e6ec);
-      min-height: 100vh;
-    }
-
-    .hero-card {
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .hero-card h2 {
-      font-size: 28px;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .hero-card p {
-      font-size: 16px;
-      color: #555;
-    }
-
-    .homepage-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      flex: 1 1 45%;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 15px;
-    }
-
-    .card.wide {
-      flex: 1 1 100%;
-      margin-top: 20px;
-    }
-
-    .banner {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .banner a {
-      background-color: #28a745;
-      color: #fff;
-      padding: 16px 24px;
-      font-size: 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .banner a:hover {
-      background-color: #218838;
-    }
-
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Custom font for better aesthetics */
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f6f9;
-      color: #333;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fff;
-      border-bottom: 2px solid #ccc;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .icon {
-      font-size: 24px;
-      margin-right: 10px;
-    }
-
-    .company-name {
-      font-weight: bold;
-      font-size: 20px;
-      color: #333;
-    }
-
-    .navigation a,
-    .contact a {
-      background-color: #007BFF;
-      color: white;
-      padding: 8px 14px;
-      margin: 0 5px;
-      text-decoration: none;
-      font-size: 14px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .navigation a:hover,
-    .contact a:hover {
-      background-color: #0056b3;
-    }
-
-    .navigation a.active {
-      background-color: #0056b3;
-      border: 2px solid red;
-    }
-
-    main {
-      padding: 30px;
-    }
-
-    .dropdown {
-      margin-bottom: 20px;
-    }
-
-    .dropdown select {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-    }
-
-    .grid {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .section {
-      flex: 1;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .banner {
-      background-color: #007BFF;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      display: block;
-      margin-top: 30px;
-    }
-
-    .banner:hover {
-      background-color: #0056b3;
-    }
-    /* Recruitment page layout */
-
-    .recruitment-page {
-      background: linear-gradient(to bottom right, #eef3f9, #dbe3ec);
-      padding: 40px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .dropdown-section {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 400px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .dropdown-section label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .dropdown-section select {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .recruitment-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
-
-    .recruitment-grid .card {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      flex-grow: 1;
-    }
-
-    .recruitment-grid .half {
-      flex: 1 1 45%;
-    }
-
-    .recruitment-grid .wide {
-      flex: 1 1 100%;
-    }
-
-    .recruitment-grid h3 {
-      color: #2a2a2a;
-      margin-bottom: 10px;
-    }
-
-    .recruitment-grid ul {
-      padding-left: 20px;
-    }
-
-    .recruitment-grid ul li {
-      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <span class="icon">♿</span>
-      <span class="company-name">Bobble Digital</span>
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header Section -->
+  <header class="bg-white border-b-2 border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between shadow-md">
+    <div class="logo flex items-center mb-4 sm:mb-0">
+      <span class="icon text-2xl mr-2">♿</span>
+      <span class="company-name font-bold text-xl text-gray-800">Bobble Digital</span>
     </div>
-    <nav class="navigation">
-      <a href="index.html">HOME</a>
-      <a href="recruitment.html" class="active">RECRUITMENT</a>
-      <a href="courses.html">COURSES</a>
-      <a href="profiles.html">PROFILES</a>
+    <nav class="navigation flex flex-wrap justify-center sm:justify-start gap-2 mb-4 sm:mb-0">
+      <a href="index.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300">HOME</a>
+      <a href="recruitment.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300 active:bg-blue-800 border-2 border-transparent">RECRUITMENT</a>
+      <a href="courses.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300">COURSES</a>
+      <a href="profiles.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300">PROFILES</a>
     </nav>
     <div class="contact">
-      <a href="contact.html">CONTACT US</a>
+      <a href="contact.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">CONTACT US</a>
     </div>
   </header>
 
-  <main class="recruitment-page">
-    <section class="dropdown-section">
-      <label for="job-role">Select a Job Role:</label>
-      <select id="job-role">
+  <main class="recruitment-page flex flex-col gap-8 p-6 lg:p-10 bg-gradient-to-br from-blue-50 to-indigo-100 flex-grow">
+    <section class="dropdown-section bg-white p-6 rounded-lg shadow-md max-w-sm mx-auto w-full">
+      <label for="job-role" class="font-bold text-gray-700 block mb-2 text-lg">Select a Job Role:</label>
+      <select id="job-role" class="w-full p-3 text-base border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
         <option>Web Developer</option>
         <option>Trainee Web Developer</option>
       </select>
     </section>
 
-    <div class="recruitment-grid">
-      <div class="card wide">
-        <h3>Job Responsibilities</h3>
-        <ul>
-          <li>Develop and maintain front-end interfaces using HTML, CSS, and JavaScript</li>
-          <li>Collaborate with designers and back-end developers</li>
+    <div class="recruitment-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Job Responsibilities Card -->
+      <div class="card md:col-span-2 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Job Responsibilities</h3>
+        <ul class="list-disc pl-5 text-gray-700 text-base">
+          <li class="mb-2">Develop and maintain front-end interfaces using HTML, CSS, and JavaScript</li>
+          <li class="mb-2">Collaborate with designers and back-end developers</li>
           <li>Participate in code reviews and testing cycles</li>
         </ul>
       </div>
 
-      <div class="card half">
-        <h3>Company Information & Location</h3>
-        <p>Bobble Digital is based in Leeds, UK, with a hybrid workplace model. We’re a digital-first company driven by creativity and accessibility.</p>
+      <!-- Company Information & Location Card -->
+      <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Company Information & Location</h3>
+        <p class="text-gray-700 text-base">Bobble Digital is based in Leeds, UK, with a hybrid workplace model. We’re a digital-first company driven by creativity and accessibility.</p>
       </div>
 
-      <div class="card half">
-        <h3>Pay, Role & Benefits</h3>
-        <p><strong>Salary:</strong> £30,000 – £40,000/year<br>
-        <strong>Role Type:</strong> Full-Time, Hybrid<br>
-        <strong>Benefits:</strong> Private healthcare, free lunch Fridays, gym discounts, and mental health support.</p>
+      <!-- Pay, Role & Benefits Card -->
+      <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Pay, Role & Benefits</h3>
+        <p class="text-gray-700 text-base">
+          <strong class="font-semibold">Salary:</strong> £30,000 – £40,000/year<br>
+          <strong class="font-semibold">Role Type:</strong> Full-Time, Hybrid<br>
+          <strong class="font-semibold">Benefits:</strong> Private healthcare, free lunch Fridays, gym discounts, and mental health support.
+        </p>
       </div>
 
-      <div class="card wide">
-        <h3>Leave & Additional Info</h3>
-        <p>28 days annual leave (including bank holidays), paid volunteer days, team outings, and professional training support.</p>
+      <!-- Leave & Additional Info Card -->
+      <div class="card md:col-span-2 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Leave & Additional Info</h3>
+        <p class="text-gray-700 text-base">28 days annual leave (including bank holidays), paid volunteer days, team outings, and professional training support.</p>
       </div>
     </div>
 
-    <section class="banner">
-      <a href="courses.html">Upskill with our Free Web Dev Courses – Click to Learn More!</a>
+    <section class="banner text-center mt-8">
+      <a href="courses.html" class="bg-green-600 text-white py-4 px-6 rounded-lg text-lg font-semibold inline-block transition duration-300 hover:bg-green-700 shadow-md">
+        Upskill with our Free Web Dev Courses – Click to Learn More!
+      </a>
     </section>
   </main>
 </body>
