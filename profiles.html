@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profiles - Bobble Digital</title>
+  <!-- Google Fonts - Roboto (Modern & Simplified) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom font for better aesthetics */
+    body {
+      font-family: 'Roboto', sans-serif; /* Applied Roboto as the primary font */
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col">
+  <!-- Header Section -->
+  <header class="bg-white border-b border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between shadow-sm">
+    <div class="logo flex items-center mb-4 sm:mb-0">
+      <span class="icon text-2xl mr-2 text-blue-600">♿</span>
+      <span class="company-name font-bold text-xl text-gray-800">Bobble Digital</span>
+    </div>
+    <nav class="navigation flex flex-wrap justify-center sm:justify-start gap-2 mb-4 sm:mb-0">
+      <a href="index.html" class="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-md text-sm transition duration-300">HOME</a>
+      <a href="recruitment.html" class="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-md text-sm transition duration-300">RECRUITMENT</a>
+      <a href="courses.html" class="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-md text-sm transition duration-300">COURSES</a>
+      <a href="profiles.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300 active:bg-blue-700 border-2 border-transparent">PROFILES</a>
+    </nav>
+    <div class="contact">
+      <a href="contact.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">CONTACT US</a>
+    </div>
+  </header>
+
+  <main class="profiles-page flex flex-col gap-8 p-6 md:p-10 lg:p-16 bg-gradient-to-br from-white to-gray-100 flex-grow">
+
+    <section class="profiles-intro-banner bg-gradient-to-r from-purple-500 to-indigo-600 p-6 rounded-lg shadow-md text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Meet Our Talented Team!</h2>
+      <p class="text-white text-opacity-90 text-md md:text-lg">Discover the diverse skills and experiences that drive innovation at Bobble Digital.</p>
+    </section>
+
+    <div class="profiles-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      <!-- Profile Card 1 -->
+      <div class="profile-card bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
+          <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="https://placehold.co/96x96/E0E0E0/666666?text=👤" alt="Profile Picture" class="w-full h-full object-cover">
+          </div>
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">Jane Doe</h3>
+            <p class="text-blue-600 text-sm">jane.doe@bobbledigital.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-4 mt-4">
+          <h4 class="font-semibold text-gray-700 mb-2 text-base">Work Experience:</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Leading front-end development for 5 years, specializing in React and responsive UI design.
+            Previously worked at XYZ Corp, contributing to high-traffic e-commerce platforms.
+            Passionate about accessible web solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Profile Card 2 -->
+      <div class="profile-card bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
+          <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="https://placehold.co/96x96/E0E0E0/666666?text=👤" alt="Profile Picture" class="w-full h-full object-cover">
+          </div>
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">John Smith</h3>
+            <p class="text-blue-600 text-sm">john.smith@bobbledigital.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-4 mt-4">
+          <h4 class="font-semibold text-gray-700 mb-2 text-base">Work Experience:</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Full-stack developer with 7 years of experience in Python/Django and modern JavaScript frameworks.
+            Excels in database design and API integration. Committed to clean code architecture.
+          </p>
+        </div>
+      </div>
+
+      <!-- Profile Card 3 -->
+      <div class="profile-card bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
+          <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="https://placehold.co/96x96/E0E0E0/666666?text=👤" alt="Profile Picture" class="w-full h-full object-cover">
+          </div>
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">Emily White</h3>
+            <p class="text-blue-600 text-sm">emily.white@bobbledigital.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-4 mt-4">
+          <h4 class="font-semibold text-gray-700 mb-2 text-base">Work Experience:</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Digital marketing strategist with a focus on SEO and content optimization.
+            Managed successful campaigns for various clients, boosting online visibility and engagement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Profile Card 4 (example of more profiles) -->
+      <div class="profile-card bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
+          <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="https://placehold.co/96x96/E0E0E0/666666?text=👤" alt="Profile Picture" class="w-full h-full object-cover">
+          </div>
+          <div class="text-center sm:text-left">
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">Michael Brown</h3>
+            <p class="text-blue-600 text-sm">michael.brown@bobbledigital.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-4 mt-4">
+          <h4 class="font-semibold text-gray-700 mb-2 text-base">Work Experience:</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            UI/UX Designer with a strong background in user-centered design principles and prototyping.
+            Creates intuitive and visually appealing interfaces that enhance user experience.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Overall Page Banner - Similar to other pages -->
+    <section class="banner text-center mt-12 p-8 bg-gradient-to-r from-teal-500 to-green-600 rounded-lg shadow-md col-span-full">
+      <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Interested in Joining Our Team?</h3>
+      <a href="recruitment.html" class="bg-white text-teal-700 py-3 px-8 rounded-full text-lg md:text-xl font-semibold inline-block transition duration-300 hover:bg-gray-100 hover:scale-105 shadow-sm">
+        View Open Vacancies!
+      </a>
+    </section>
+  </main>
+</body>
+</html>
