@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - Bobble Digital</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom font for better aesthetics */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Custom style for highlighting a selected course card */
+    .highlighted-course {
+      border: 3px solid #3B82F6; /* blue-500 equivalent */
+      box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.5); /* blue-500 shadow */
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header Section -->
+  <header class="bg-white border-b-2 border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between shadow-md">
+    <div class="logo flex items-center mb-4 sm:mb-0">
+      <span class="icon text-2xl mr-2 text-blue-600">♿</span>
+      <span class="company-name font-bold text-xl text-gray-800">Bobble Digital</span>
+    </div>
+    <nav class="navigation flex flex-wrap justify-center sm:justify-start gap-2 mb-4 sm:mb-0">
+      <a href="index.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">HOME</a>
+      <a href="recruitment.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">RECRUITMENT</a>
+      <a href="courses.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300 active:bg-blue-800 border-2 border-transparent">COURSES</a>
+      <a href="profiles.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">PROFILES</a>
+    </nav>
+    <div class="contact">
+      <a href="contact.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">CONTACT US</a>
+    </div>
+  </header>
+
+  <main class="courses-page flex flex-col md:grid md:grid-cols-3 gap-8 p-4 md:p-8 lg:p-12 bg-gradient-to-br from-purple-50 to-pink-100 flex-grow">
+
+    <!-- Left Sidebar: Search Bar & Open Vacancies -->
+    <aside class="col-span-1 flex flex-col gap-6">
+      <section class="search-bar-section bg-white p-6 rounded-lg shadow-md relative">
+        <label for="course-search" class="font-bold text-gray-700 block mb-2 text-lg">Search Courses:</label>
+        <input type="text" id="course-search" placeholder="e.g., HTML, JavaScript"
+               class="w-full p-3 text-base border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <!-- Search Results Dropdown -->
+        <div id="search-results-dropdown" class="absolute z-10 w-full mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden max-h-60 overflow-y-auto">
+          <!-- Results will be injected here by JavaScript -->
+        </div>
+      </section>
+
+      <section class="open-vacancies-ad bg-white p-6 rounded-lg shadow-md text-center border-l-4 border-blue-500">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Open Vacancies Go Here!</h3>
+        <p class="text-gray-600 text-base mb-4">Looking for a career? Check out our current job openings and apply today!</p>
+        <a href="recruitment.html" class="bg-blue-600 text-white py-2 px-5 rounded-md text-sm hover:bg-blue-700 transition duration-300 shadow-md">
+          View All Vacancies
+        </a>
+      </section>
+    </aside>
+
+    <!-- Main Content Area: Company Banner & Course Listings -->
+    <div class="col-span-2 flex flex-col gap-8">
+      <section class="company-banner-ad bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Unlock Your Potential with Bobble Digital!</h3>
+        <p class="text-white text-opacity-90 text-md md:text-lg">Specializing in cutting-edge web solutions and digital marketing strategies.</p>
+      </section>
+
+      <!-- Course Listings -->
+      <section id="course-listings" class="course-listings flex flex-col gap-6">
+
+        <!-- Course 1: Fundamentals of Web Development (HTML/CSS) -->
+        <div id="course-1" class="course-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 sm:mb-0 course-title">Fundamentals of Web Development (HTML/CSS)</h4>
+            <button class="more-info-toggle bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300 flex items-center" onclick="toggleCourseInfo(this)">
+              More Info
+              <svg class="w-4 h-4 ml-2 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+          </div>
+          <div class="course-info-details hidden text-gray-700 text-base mt-4 border-t border-gray-200 pt-4">
+            <p class="mb-2 course-description">This foundational course covers the essentials of HTML5 for structuring web content and CSS3 for styling. Learn to build visually appealing and accessible web pages from scratch.</p>
+            <p class="mb-2"><strong>Key Topics:</strong> Semantic HTML, CSS Flexbox, Grid, Responsive Design, Introduction to Web Accessibility.</p>
+            <p class="mb-4"><strong>Duration:</strong> 4 Weeks | <strong>Level:</strong> Beginner</p>
+            <a href="apply.html" class="bg-green-600 text-white py-2 px-5 rounded-md text-sm hover:bg-green-700 transition duration-300 shadow-md inline-block">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Course 2: Introduction to JavaScript & DOM Manipulation -->
+        <div id="course-2" class="course-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 sm:mb-0 course-title">Introduction to JavaScript & DOM Manipulation</h4>
+            <button class="more-info-toggle bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300 flex items-center" onclick="toggleCourseInfo(this)">
+              More Info
+              <svg class="w-4 h-4 ml-2 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+          </div>
+          <div class="course-info-details hidden text-gray-700 text-base mt-4 border-t border-gray-200 pt-4">
+            <p class="mb-2 course-description">Dive into the world of interactive web development with JavaScript. This course teaches core JS concepts and how to dynamically manipulate the Document Object Model (DOM).</p>
+            <p class="mb-2"><strong>Key Topics:</strong> Variables, Data Types, Functions, Event Handling, Loops, Conditionals, DOM Selection and Manipulation.</p>
+            <p class="mb-4"><strong>Duration:</strong> 6 Weeks | <strong>Level:</strong> Beginner/Intermediate</p>
+            <a href="apply.html" class="bg-green-600 text-white py-2 px-5 rounded-md text-sm hover:bg-green-700 transition duration-300 shadow-md inline-block">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Course 3: Advanced CSS & Animation Techniques -->
+        <div id="course-3" class="course-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 sm:mb-0 course-title">Advanced CSS & Animation Techniques</h4>
+            <button class="more-info-toggle bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300 flex items-center" onclick="toggleCourseInfo(this)">
+              More Info
+              <svg class="w-4 h-4 ml-2 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+          </div>
+          <div class="course-info-details hidden text-gray-700 text-base mt-4 border-t border-gray-200 pt-4">
+            <p class="mb-2 course-description">Elevate your web designs with advanced CSS features and captivating animations. Learn about transitions, transforms, keyframes, and more to create dynamic user interfaces.</p>
+            <p class="mb-2"><strong>Key Topics:</strong> CSS Custom Properties, Blend Modes, Filters, 2D/3D Transforms, CSS Animations, SVG Animations.</p>
+            <p class="mb-4"><strong>Duration:</strong> 3 Weeks | <strong>Level:</strong> Intermediate</p>
+            <a href="apply.html" class="bg-green-600 text-white py-2 px-5 rounded-md text-sm hover:bg-green-700 transition duration-300 shadow-md inline-block">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Course 4: Introduction to React.js for Modern Web Apps -->
+        <div id="course-4" class="course-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+            <h4 class="text-xl font-semibold text-gray-800 mb-2 sm:mb-0 course-title">Introduction to React.js for Modern Web Apps</h4>
+            <button class="more-info-toggle bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300 flex items-center" onclick="toggleCourseInfo(this)">
+              More Info
+              <svg class="w-4 h-4 ml-2 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+          </div>
+          <div class="course-info-details hidden text-gray-700 text-base mt-4 border-t border-gray-200 pt-4">
+            <p class="mb-2 course-description">Build dynamic and efficient user interfaces with React.js, a popular JavaScript library. This course covers components, state, props, and fundamental React hooks.</p>
+            <p class="mb-2"><strong>Key Topics:</strong> JSX, Functional Components, State Management (useState, useEffect), Props, Conditional Rendering, Lists & Keys.</p>
+            <p class="mb-4"><strong>Duration:</strong> 8 Weeks | <strong>Level:</strong> Intermediate</p>
+            <a href="apply.html" class="bg-green-600 text-white py-2 px-5 rounded-md text-sm hover:bg-green-700 transition duration-300 shadow-md inline-block">Apply Now</a>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // --- Course Card Toggle Function ---
+    function toggleCourseInfo(button) {
+      const detailsDiv = button.closest('.course-card').querySelector('.course-info-details');
+      const icon = button.querySelector('svg');
+
+      if (detailsDiv.classList.contains('hidden')) {
+        detailsDiv.classList.remove('hidden');
+        detailsDiv.classList.add('block'); // Ensure it becomes visible
+        icon.classList.remove('rotate-0');
+        icon.classList.add('rotate-180'); // Rotate arrow up
+      } else {
+        detailsDiv.classList.add('hidden');
+        detailsDiv.classList.remove('block');
+        icon.classList.remove('rotate-180');
+        icon.classList.add('rotate-0'); // Rotate arrow down
+      }
+    }
+
+    // --- Search & Filter Functionality ---
+
+    const courseSearchInput = document.getElementById('course-search');
+    const searchResultsDropdown = document.getElementById('search-results-dropdown');
+    const courseCards = document.querySelectorAll('.course-card'); // Get all course card elements
+
+    // Prepare course data for searching
+    const courseData = Array.from(courseCards).map(card => {
+      return {
+        id: card.id,
+        title: card.querySelector('.course-title').textContent,
+        description: card.querySelector('.course-description').textContent,
+        element: card // Store a reference to the actual DOM element
+      };
+    });
+
+    // Function to hide all course cards
+    function hideAllCourseCards() {
+      courseCards.forEach(card => {
+        card.classList.add('hidden');
+        card.classList.remove('highlighted-course'); // Remove highlight when hiding
+      });
+    }
+
+    // Function to show a specific course card by its ID
+    function showCourseCard(courseId) {
+      const cardToShow = document.getElementById(courseId);
+      if (cardToShow) {
+        cardToShow.classList.remove('hidden');
+        cardToShow.classList.add('block');
+        cardToShow.classList.add('highlighted-course'); // Add highlight
+        cardToShow.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll to it
+      }
+    }
+
+    // Function to show all course cards
+    function showAllCourseCards() {
+      courseCards.forEach(card => {
+        card.classList.remove('hidden');
+        card.classList.remove('highlighted-course'); // Remove highlight
+        card.classList.add('block');
+      });
+    }
+
+    // Function to generate and display search suggestions
+    function displaySearchResults(results) {
+      searchResultsDropdown.innerHTML = ''; // Clear previous results
+
+      if (results.length > 0) {
+        results.forEach(course => {
+          const resultItem = document.createElement('div');
+          resultItem.classList.add('p-3', 'cursor-pointer', 'hover:bg-gray-100', 'border-b', 'border-gray-200', 'last:border-b-0');
+          resultItem.textContent = course.title;
+          resultItem.dataset.courseId = course.id; // Store course ID for lookup
+
+          resultItem.addEventListener('click', (event) => {
+            const selectedCourseId = event.target.dataset.courseId;
+            courseSearchInput.value = courseData.find(c => c.id === selectedCourseId).title; // Set input to selected title
+            searchResultsDropdown.classList.add('hidden'); // Hide dropdown
+
+            hideAllCourseCards();
+            showCourseCard(selectedCourseId);
+
+            // Optional: Automatically open "More Info" for the selected course
+            const selectedCourseButton = document.getElementById(selectedCourseId).querySelector('.more-info-toggle');
+            if (selectedCourseButton && selectedCourseButton.closest('.course-card').querySelector('.course-info-details').classList.contains('hidden')) {
+                toggleCourseInfo(selectedCourseButton);
+            }
+          });
+          searchResultsDropdown.appendChild(resultItem);
+        });
+        searchResultsDropdown.classList.remove('hidden'); // Show dropdown
+      } else {
+        searchResultsDropdown.classList.add('hidden'); // Hide dropdown if no results
+      }
+    }
+
+    // Event listener for search input
+    courseSearchInput.addEventListener('input', () => {
+      const searchTerm = courseSearchInput.value.trim().toLowerCase();
+
+      if (searchTerm.length > 0) {
+        const filteredCourses = courseData.filter(course =>
+          course.title.toLowerCase().includes(searchTerm) ||
+          course.description.toLowerCase().includes(searchTerm)
+        );
+        displaySearchResults(filteredCourses);
+        hideAllCourseCards(); // Hide all cards while searching
+      } else {
+        searchResultsDropdown.classList.add('hidden'); // Hide dropdown
+        showAllCourseCards(); // Show all cards when search is empty
+      }
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!courseSearchInput.contains(event.target) && !searchResultsDropdown.contains(event.target)) {
+        searchResultsDropdown.classList.add('hidden');
+      }
+    });
+
+    // Initial state: show all cards on page load
+    showAllCourseCards();
+  </script>
+</body>
+</html>
