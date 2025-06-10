@@ -2,305 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Bobble Digital</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Add this below the existing CSS in style.css */
-
-    .homepage {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      padding: 30px;
-      background: linear-gradient(to right, #f0f2f5, #e2e6ec);
-      min-height: 100vh;
-    }
-
-    .hero-card {
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .hero-card h2 {
-      font-size: 28px;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .hero-card p {
-      font-size: 16px;
-      color: #555;
-    }
-
-    .homepage-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      flex: 1 1 45%;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 15px;
-    }
-
-    .card.wide {
-      flex: 1 1 100%;
-      margin-top: 20px;
-    }
-
-    .banner {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .banner a {
-      background-color: #28a745;
-      color: #fff;
-      padding: 16px 24px;
-      font-size: 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .banner a:hover {
-      background-color: #218838;
-    }
-
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Custom font for better aesthetics */
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f6f9;
-      color: #333;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fff;
-      border-bottom: 2px solid #ccc;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .icon {
-      font-size: 24px;
-      margin-right: 10px;
-    }
-
-    .company-name {
-      font-weight: bold;
-      font-size: 20px;
-      color: #333;
-    }
-
-    .navigation a,
-    .contact a {
-      background-color: #007BFF;
-      color: white;
-      padding: 8px 14px;
-      margin: 0 5px;
-      text-decoration: none;
-      font-size: 14px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .navigation a:hover,
-    .contact a:hover {
-      background-color: #0056b3;
-    }
-
-    .navigation a.active {
-      background-color: #0056b3;
-      border: 2px solid red;
-    }
-
-    main {
-      padding: 30px;
-    }
-
-    .dropdown {
-      margin-bottom: 20px;
-    }
-
-    .dropdown select {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-    }
-
-    .grid {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .section {
-      flex: 1;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .banner {
-      background-color: #007BFF;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      display: block;
-      margin-top: 30px;
-    }
-
-    .banner:hover {
-      background-color: #0056b3;
-    }
-    /* Recruitment page layout */
-
-    .recruitment-page {
-      background: linear-gradient(to bottom right, #eef3f9, #dbe3ec);
-      padding: 40px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .dropdown-section {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 400px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .dropdown-section label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .dropdown-section select {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .recruitment-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
-
-    .recruitment-grid .card {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      flex-grow: 1;
-    }
-
-    .recruitment-grid .half {
-      flex: 1 1 45%;
-    }
-
-    .recruitment-grid .wide {
-      flex: 1 1 100%;
-    }
-
-    .recruitment-grid h3 {
-      color: #2a2a2a;
-      margin-bottom: 10px;
-    }
-
-    .recruitment-grid ul {
-      padding-left: 20px;
-    }
-
-    .recruitment-grid ul li {
-      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <span class="icon">♿</span>
-      <span class="company-name">Bobble Digital</span>
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header Section -->
+  <header class="bg-white border-b-2 border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between shadow-md">
+    <div class="logo flex items-center mb-4 sm:mb-0">
+      <span class="icon text-2xl mr-2">♿</span>
+      <span class="company-name font-bold text-xl text-gray-800">Bobble Digital</span>
     </div>
-    <nav class="navigation">
-      <a href="index.html" class="active">HOME</a>
-      <a href="recruitment.html">RECRUITMENT</a>
-      <a href="courses.html">COURSES</a>
-      <a href="profiles.html">PROFILES</a>
+    <nav class="navigation flex flex-wrap justify-center sm:justify-start gap-2 mb-4 sm:mb-0">
+      <a href="index.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300 active:bg-blue-800 border-2 border-transparent">HOME</a>
+      <a href="recruitment.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300">RECRUITMENT</a>
+      <a href="courses.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300">COURSES</a>
+      <a href="profiles.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300">PROFILES</a>
     </nav>
     <div class="contact">
-      <a href="contact.html">CONTACT US</a>
+      <a href="contact.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">CONTACT US</a>
     </div>
   </header>
 
-  <main class="homepage">
-    <section class="hero-card">
-      <h2>Explore Job Roles, Pay, and Benefits</h2>
-      <p>Find your next opportunity with Bobble Digital. Discover roles that match your passion and skills.</p>
+  <main class="homepage flex flex-col gap-8 p-6 lg:p-10 bg-gradient-to-r from-gray-50 to-gray-200 flex-grow">
+    <section class="hero-card bg-white p-6 md:p-10 rounded-lg shadow-lg text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Explore Job Roles, Pay, and Benefits</h2>
+      <p class="text-lg text-gray-600">Find your next opportunity with Bobble Digital. Discover roles that match your passion and skills.</p>
     </section>
 
-    <div class="homepage-grid">
-      <div class="card">
-        <h3>Job Responsibilities</h3>
-        <p>Understand what your day-to-day tasks would include. We value transparency and clarity in every role.</p>
+    <div class="homepage-grid flex flex-wrap gap-6 justify-center">
+      <!-- Card 1 -->
+      <div class="card flex-1 basis-full sm:basis-[calc(50%-12px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(33.33%-16px)] bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Job Responsibilities</h3>
+        <p class="text-gray-600 text-base">Understand what your day-to-day tasks would include. We value transparency and clarity in every role.</p>
       </div>
-      <div class="card">
-        <h3>Company Information</h3>
-        <p>Learn about our mission, team culture, and the exciting projects we work on at our Leeds headquarters.</p>
+      <!-- Card 2 -->
+      <div class="card flex-1 basis-full sm:basis-[calc(50%-12px)] md:basis-[calc(33.33%-16px)] lg:basis-[calc(33.33%-16px)] bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Company Information</h3>
+        <p class="text-gray-600 text-base">Learn about our mission, team culture, and the exciting projects we work on at our Leeds headquarters.</p>
+      </div>
+       <!-- Card 3 (originally "wide" but integrated into a responsive grid) -->
+      <div class="card flex-1 basis-full md:basis-[calc(33.33%-16px)] bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Benefits & Leave</h3>
+        <p class="text-gray-600 text-base">Paid leave, holiday time, hybrid work opportunities, and flexible schedules designed with you in mind.</p>
       </div>
     </div>
 
-    <section class="card wide">
-      <h3>Benefits & Leave</h3>
-      <p>Paid leave, holiday time, hybrid work opportunities, and flexible schedules designed with you in mind.</p>
-    </section>
-
-    <section class="banner">
-      <a href="courses.html">Check out our Online Courses – Skill Up Today!</a>
+    <section class="banner text-center mt-8">
+      <a href="courses.html" class="bg-green-600 text-white py-4 px-6 rounded-lg text-lg font-semibold inline-block transition duration-300 hover:bg-green-700 shadow-md">
+        Check out our Online Courses – Skill Up Today!
+      </a>
     </section>
   </main>
 </body>
