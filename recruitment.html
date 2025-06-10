@@ -13,68 +13,90 @@
     }
   </style>
 </head>
-<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col">
   <!-- Header Section -->
-  <header class="bg-white border-b-2 border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between shadow-md">
+  <header class="bg-white border-b border-gray-200 p-4 flex flex-col sm:flex-row items-center justify-between shadow-sm">
     <div class="logo flex items-center mb-4 sm:mb-0">
       <span class="icon text-2xl mr-2 text-blue-600">♿</span>
       <span class="company-name font-bold text-xl text-gray-800">Bobble Digital</span>
     </div>
     <nav class="navigation flex flex-wrap justify-center sm:justify-start gap-2 mb-4 sm:mb-0">
-      <a href="index.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">HOME</a>
-      <a href="recruitment.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300 active:bg-blue-800 border-2 border-transparent">RECRUITMENT</a>
-      <a href="courses.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">COURSES</a>
-      <a href="profiles.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">PROFILES</a>
+      <a href="index.html" class="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-md text-sm transition duration-300">HOME</a>
+      <a href="recruitment.html" class="bg-blue-500 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-600 transition duration-300 active:bg-blue-700 border-2 border-transparent">RECRUITMENT</a>
+      <a href="courses.html" class="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-md text-sm transition duration-300">COURSES</a>
+      <a href="profiles.html" class="text-gray-700 hover:text-blue-600 py-2 px-4 rounded-md text-sm transition duration-300">PROFILES</a>
     </nav>
     <div class="contact">
       <a href="contact.html" class="bg-blue-600 text-white py-2 px-4 rounded-md text-sm hover:bg-blue-700 transition duration-300">CONTACT US</a>
     </div>
   </header>
 
-  <main class="recruitment-page flex flex-col gap-8 p-4 md:p-8 lg:p-12 bg-gradient-to-br from-blue-50 to-indigo-100 flex-grow">
-    <section class="dropdown-section bg-white p-6 rounded-lg shadow-md max-w-sm mx-auto w-full">
-      <label for="job-role" class="font-bold text-gray-700 block mb-2 text-lg">Select a Job Role:</label>
-      <select id="job-role" class="w-full p-3 text-base border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option value="Web Developer">Web Developer</option>
-        <option value="Trainee Web Developer">Trainee Web Developer</option>
-      </select>
-    </section>
+  <main class="recruitment-page flex flex-col md:grid md:grid-cols-3 gap-8 p-6 md:p-10 lg:p-16 bg-gradient-to-br from-white to-gray-100 flex-grow">
 
-    <div class="recruitment-grid grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Job Responsibilities Card -->
-      <div class="card md:col-span-2 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Job Responsibilities</h3>
-        <ul id="job-responsibilities-list" class="list-disc pl-5 text-gray-700 text-base">
-          <!-- Responsibilities will be dynamically loaded here by JavaScript -->
-        </ul>
-      </div>
+    <!-- Left Sidebar Column: Job Role Selection & Recruitment Intro -->
+    <aside class="col-span-1 flex flex-col gap-6">
+      <section class="dropdown-section bg-white p-6 rounded-lg shadow-sm w-full border border-gray-200">
+        <label for="job-role" class="font-bold text-gray-700 block mb-2 text-lg">Select a Job Role:</label>
+        <select id="job-role" class="w-full p-3 text-base border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="Web Developer">Web Developer</option>
+          <option value="Trainee Web Developer">Trainee Web Developer</option>
+        </select>
+      </section>
 
-      <!-- Company Information & Location Card -->
-      <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Company Information & Location</h3>
-        <p class="text-gray-700 text-base">Bobble Digital is based in Leeds, UK, with a hybrid workplace model. We’re a digital-first company driven by creativity and accessibility.</p>
-      </div>
+      <section class="recruitment-intro-ad bg-white p-6 rounded-lg shadow-sm text-center border-l-4 border-blue-500">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Why Join Bobble Digital?</h3>
+        <p class="text-gray-600 text-base mb-4">We're building the future of digital with a passion for creativity and accessibility. Find out how you can contribute to innovative projects.</p>
+        <a href="contact.html" class="bg-blue-600 text-white py-2 px-5 rounded-md text-sm hover:bg-blue-700 transition duration-300 shadow-sm">
+          Learn More About Us
+        </a>
+      </section>
+    </aside>
 
-      <!-- Pay, Role & Benefits Card -->
-      <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Pay, Role & Benefits</h3>
-        <p class="text-gray-700 text-base">
-          <strong class="font-semibold">Salary:</strong> £30,000 – £40,000/year<br>
-          <strong class="font-semibold">Role Type:</strong> Full-Time, Hybrid<br>
-          <strong class="font-semibold">Benefits:</strong> Private healthcare, free lunch Fridays, gym discounts, and mental health support.
-        </p>
-      </div>
+    <!-- Main Content Area: Job Details Cards -->
+    <div class="col-span-2 flex flex-col gap-8">
+      <!-- A welcoming banner for the main content area, similar to courses.html -->
+      <section class="main-content-banner bg-gradient-to-r from-purple-500 to-indigo-600 p-6 rounded-lg shadow-md text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Your Career Starts Here!</h3>
+        <p class="text-white text-opacity-90 text-md md:text-lg">Detailed insights into our roles, company culture, and employee benefits.</p>
+      </section>
 
-      <!-- Leave & Additional Info Card -->
-      <div class="card md:col-span-2 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Leave & Additional Info</h3>
-        <p class="text-gray-700 text-base">28 days annual leave (including bank holidays), paid volunteer days, team outings, and professional training support.</p>
+      <div class="recruitment-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Job Responsibilities Card -->
+        <div class="card md:col-span-2 bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Job Responsibilities</h3>
+          <ul id="job-responsibilities-list" class="list-disc pl-5 text-gray-700 text-base">
+            <!-- Responsibilities will be dynamically loaded here by JavaScript -->
+          </ul>
+        </div>
+
+        <!-- Company Information & Location Card -->
+        <div class="card bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Company Information & Location</h3>
+          <p class="text-gray-700 text-base">Bobble Digital is based in Leeds, UK, with a hybrid workplace model. We’re a digital-first company driven by creativity and accessibility.</p>
+        </div>
+
+        <!-- Pay, Role & Benefits Card -->
+        <div class="card bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Pay, Role & Benefits</h3>
+          <p class="text-gray-700 text-base">
+            <strong class="font-semibold">Salary:</strong> £30,000 – £40,000/year<br>
+            <strong class="font-semibold">Role Type:</strong> Full-Time, Hybrid<br>
+            <strong class="font-semibold">Benefits:</strong> Private healthcare, free lunch Fridays, gym discounts, and mental health support.
+          </p>
+        </div>
+
+        <!-- Leave & Additional Info Card -->
+        <div class="card md:col-span-2 bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition duration-200 ease-in-out border border-gray-200">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Leave & Additional Info</h3>
+          <p class="text-gray-700 text-base text-center">28 days annual leave (including bank holidays), paid volunteer days, team outings, and professional training support.</p>
+        </div>
       </div>
     </div>
 
-    <section class="banner text-center mt-12 p-6 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg shadow-lg">
+    <!-- Overall Page Banner - Spans all columns -->
+    <section class="banner text-center mt-12 p-8 bg-gradient-to-r from-teal-500 to-green-600 rounded-lg shadow-md col-span-full">
       <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Elevate Your Skills?</h3>
-      <a href="courses.html" class="bg-white text-green-800 py-3 px-8 rounded-full text-lg md:text-xl font-semibold inline-block transition duration-300 hover:bg-gray-100 hover:scale-105 shadow-md">
+      <a href="courses.html" class="bg-white text-teal-700 py-3 px-8 rounded-full text-lg md:text-xl font-semibold inline-block transition duration-300 hover:bg-gray-100 hover:scale-105 shadow-sm">
         Explore Our Free Web Dev Courses!
       </a>
     </section>
